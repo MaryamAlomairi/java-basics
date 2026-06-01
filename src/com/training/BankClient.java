@@ -29,11 +29,11 @@ public class BankClient {
         
         System.out.println("ENTER 3 SAVING ACCOUNTS");
 
-        for (int i = 0; i < 3; i++) { //runs 3 times to create 3 saving accounts.
+        for (int i = 0; i < 3; i++) { 
 
             System.out.println("Saving Account " + (i + 1));
 
-            while (true) { // until correct value
+            while (true) { 
                 try {
                     System.out.print("Enter Account Number: ");
                     int accNo = sc.nextInt();
@@ -51,7 +51,7 @@ public class BankClient {
                     break;
 
                 } catch (InputMismatchException e) {
-                    System.out.println("❌ Invalid input! Try again.");
+                    System.out.println("Invalid input! Try again.");
                     sc.next();
                 }
             }
@@ -81,16 +81,15 @@ public class BankClient {
                     break;
 
                 } catch (InputMismatchException e) {
-                    System.out.println("❌ Invalid input! Try again.");
+                    System.out.println("Invalid input! Try again.");
                     sc.next();
                 }
             }
         }
 
-        System.out.println("\nAccounts created successfully.");
+        System.out.println("Accounts created successfully.");
 	}
-	
-	
+		
 	
 }
 

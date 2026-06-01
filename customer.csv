@@ -1,0 +1,7 @@
+customer_id,customer_name,gender,city
+C101,Sara,Female,Muscat
+C102,Abraham,Male,Salalah
+C103,Kabir,Male,Ruwi
+C104,Iqra,Female,Muscat
+Customer [customer_id=1, customer_name=maryam, gender=female, city=muscat], Balance=650.0
+810,sara,female,alamart,650.0

@@ -37,7 +37,7 @@ public class CustomerFileWriter {
             System.out.print("Enter Balance: ");
             double balance = sc.nextDouble();
 
-            if (balance > 100) {
+            if (balance > 1000) {
 
                 bw.write(customer_id + "," +
                          customer_name + "," +
@@ -51,7 +51,7 @@ public class CustomerFileWriter {
 
             } else {
                 System.out.println(
-                    "Balance must be greater than 100. Customer not saved.");
+                    "Balance must be greater than 1000. Customer not saved.");
             }
 
         } catch (IOException e) {

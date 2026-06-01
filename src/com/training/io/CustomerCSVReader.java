@@ -3,9 +3,11 @@ package com.training.io;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 public class CustomerCSVReader {
 
@@ -17,7 +19,9 @@ public class CustomerCSVReader {
 
 		try (BufferedReader br = new BufferedReader(new FileReader("customer.csv"));
 				
-				BufferedWriter bw = new BufferedWriter(new FileWriter("male_customer.csv")))
+				BufferedWriter bw = new BufferedWriter(new FileWriter("male_customer.csv"));
+				
+		ObjectOutputStream oos = new ObjectOutputStream (new FileOutputStream("customer.ser")))
 		 {
 		 //file = new FileReader("customer.csv");
 		 //br = new BufferedReader(file);
@@ -33,6 +37,7 @@ public class CustomerCSVReader {
 			 String[] data = line.split(",");
 			 Customer customer = new Customer(data[0],data[1],data[2],data[3]);
 			 System.out.println(customer);
+			 oos.writeObject(customer);
 			 if(data[2].equalsIgnoreCase("Male")) {
 			 bw.write(data[0] + "," + data[1] + "," + data[2] + "," + data[3]);
 			 bw.newLine();
